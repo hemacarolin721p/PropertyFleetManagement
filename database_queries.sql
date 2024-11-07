@@ -1,9 +1,11 @@
+-- CREATE SCHEMA `property_fleet_db` ;
 -- Create property_owner table first
 CREATE TABLE property_owner (
     owner_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     contact_information VARCHAR(255),
+    password VARCHAR(255),
     email VARCHAR(255)
 );
 
@@ -185,18 +187,15 @@ CREATE TABLE vehicle (
     FOREIGN KEY (parking_spot_id, property_id) REFERENCES parking_spot(parking_spot_number, property_id)
 );
 
-
-
-
-
-
 -- Insert data into PropertyOwner table
-INSERT INTO property_owner (owner_id, first_name, last_name, contact_information, email) VALUES
-(1, 'John', 'Doe', '555-1234', 'john.doe@example.com'),
-(2, 'Alice', 'Smith', '555-5678', 'alice.smith@example.com'),
-(3, 'Michael', 'Johnson', '555-8765', 'michael.johnson@example.com'),
-(4, 'Emily', 'Davis', '555-4321', 'emily.davis@example.com'),
-(5, 'Chris', 'Brown', '555-6789', 'chris.brown@example.com');
+INSERT INTO property_owner (owner_id, first_name, last_name, contact_information, email, password) 
+VALUES
+(1, 'John', 'Doe', '555-1234', 'john.doe@example.com', 'password123'),
+(2, 'Alice', 'Smith', '555-5678', 'alice.smith@example.com', 'password456'),
+(3, 'Michael', 'Johnson', '555-8765', 'michael.johnson@example.com', 'password789'),
+(4, 'Emily', 'Davis', '555-4321', 'emily.davis@example.com', 'password101'),
+(5, 'Chris', 'Brown', '555-6789', 'chris.brown@example.com', 'password202');
+
 
 
 INSERT INTO property (property_id, property_name, city, state, street, zipcode, type, number_of_units, owner_id, property_size, construction_date) VALUES

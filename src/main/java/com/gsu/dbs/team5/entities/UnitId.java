@@ -1,8 +1,10 @@
 package com.gsu.dbs.team5.entities;
 
+import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Embeddable
 public class UnitId implements Serializable {
 
     private int unitId;

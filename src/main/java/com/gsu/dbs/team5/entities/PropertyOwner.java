@@ -22,4 +22,5 @@ public class PropertyOwner {
     private String lastName;           // Owner's last name
     private String contactInformation;  // Owner's contact information
     private String email;              // Owner's email address
+    private String password;           // Owner's password
 }

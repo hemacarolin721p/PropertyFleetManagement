@@ -20,7 +20,6 @@ public class Resident {
     private String firstName;
     private String lastName;
     private String email;
-    private String phone;
     private java.sql.Date moveInDate;
     private java.sql.Date moveOutDate;
     private String contactInformation;
